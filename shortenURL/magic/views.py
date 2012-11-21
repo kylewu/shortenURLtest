@@ -5,7 +5,6 @@ from django.core.exceptions import ValidationError
 
 from shortenURL.magic.utils import shorten_url
 from shortenURL.magic.models import ShortenURL
-from shortenURL.magic.forms import URLForm
 
 
 DOMAIN = 'http://infinite-eyrie-9012.herokuapp.com/'
