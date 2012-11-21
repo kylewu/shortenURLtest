@@ -158,5 +158,6 @@ LOGGING = {
     }
 }
 
-import dj_database_url
-DATABASES['default'] = dj_database_url.config()
+if os.uname()[1] != 'kyle':
+    import dj_database_url
+    DATABASES['default'] = dj_database_url.config()
