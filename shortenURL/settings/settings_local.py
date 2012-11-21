@@ -1,6 +1,6 @@
 from django.conf import settings
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 if DEBUG is not True:
