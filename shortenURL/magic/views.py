@@ -28,7 +28,7 @@ def short(request):
 		r = False
 
 		while True:
-			shortenURL = DOMAIN + shorten_url(originURL, r)
+			shortenURL = shorten_url(originURL, r)
 			if ShortenURL.objects.filter(shortenURL=shortenURL).exists() == True:
 				r = True
 			else:
@@ -36,6 +36,7 @@ def short(request):
 				newShortenURL.shortenURL = shortenURL
 				newShortenURL.originURL = originURL
 				newShortenURL.save()
+				shortenURL = DOMAIN + shortenURL
 				break 
 	
 	return render(request, 'success.html',

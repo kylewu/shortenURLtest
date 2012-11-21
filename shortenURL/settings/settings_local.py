@@ -1,7 +1,7 @@
 from django.conf import settings
 
-settings.DEBUG = False
-settings.TEMPLATE_DEBUG = DEBUG
+DEBUG = True
+TEMPLATE_DEBUG = DEBUG
 
 if DEBUG is not True:
 	import dj_database_url

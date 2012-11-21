@@ -17,7 +17,7 @@ urlpatterns = patterns('',
 
 	url(r'^$', 'shortenURL.magic.views.welcome', name='welcome'),
 	url(r'^short/$', 'shortenURL.magic.views.short', name='short'),
-	url(r'^(?P<shortenURL>.*)/$', 'shortenURL.magic.views.recover')
+	url(r'^(?P<shortenURL>.*)$', 'shortenURL.magic.views.recover')
 )
 
 
