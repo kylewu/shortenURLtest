@@ -2,11 +2,10 @@
 import os
 
 ROOT = os.path.dirname(os.path.dirname(
-                       os.path.dirname(
-                       os.path.abspath(__file__))))
+                       os.path.abspath(__file__)))
 path = lambda *a: os.path.join(ROOT, *a)
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -158,3 +157,5 @@ LOGGING = {
         },
     }
 }
+import dj_database_url
+settings.DATABASES['default'] = dj_database_url.config()
