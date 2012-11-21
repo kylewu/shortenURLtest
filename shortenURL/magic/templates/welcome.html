@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <form method="post" action="{{ url('short') }}">
-	    <fieldset>
-			<label>URL</label>
-			<input id="originURL" type="text" placeholder="http://" name="originURL" maxlength="256">
-			<span class="help-block">Please make sure your url starts with <code>http://</code></span>
-			<button type="submit" class="btn">SHORTEN</button>
-		</fieldset>
-    </form>
+  <form method="post" action="{{ url('short') }}">
+    <fieldset>
+      <div class="control-group {{url_error}}">
+        <label class="control-label">URL</label>
+        <div class="controls">
+          <input id="originURL" type="text" placeholder="http://" name="originURL" maxlength="256">
+          <span class="help-block">Please make sure your
+      url starts with <code>http://</code> and valid.</span>
+        </div>
+      </div>
+
+      <button type="submit" class="btn">SHORTEN</button>
+    </fieldset>
+  </form>
 {% endblock %}
