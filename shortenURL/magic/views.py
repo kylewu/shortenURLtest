@@ -21,7 +21,7 @@ def short(request):
 	# if originURL has already been in our database
 	if ShortenURL.objects.filter(originURL=originURL).exists() == True:
 		url = ShortenURL.objects.get(originURL=originURL)
-		shortenURL = url.shortenURL
+		shortenURL = DOMAIN + url.shortenURL
 	
 	# otherwise, shorten url
 	else:
