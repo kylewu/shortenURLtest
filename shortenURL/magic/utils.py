@@ -8,7 +8,7 @@ import hashlib, random, string
 # 2. The problem of this method is that if our 
 #    server restarts, Link A will get a new shorten
 #    URL because CODE is chaged.
-CODE = list(string.ascii_letters + string.digits + 'z')
+CODE = list(string.ascii_letters + string.digits)
 random.shuffle(CODE)
 
 
